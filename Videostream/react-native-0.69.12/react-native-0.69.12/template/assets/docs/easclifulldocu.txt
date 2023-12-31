@@ -1,0 +1,45 @@
+It appears that the eas command is not recognized, 
+indicating that the Expo Application Services (EAS) CLI is not installed 
+or not available in your system's PATH.
+
+Let's try to resolve this:
+
+Install EAS CLI:
+Install the EAS CLI globally by running the following command:
+
+bash
+Copy code
+npm install -g eas-cli
+This command installs the EAS CLI globally on your machine.
+
+Verify Installation:
+After installation, verify that the eas command is recognized by running:
+
+bash
+Copy code
+eas --version
+Ensure that there are no errors, and it displays the version of the EAS CLI.
+
+Restart Terminal:
+If you installed the EAS CLI while the terminal was open, 
+restart the terminal to make sure the changes take effect.
+
+Check System's PATH:
+Double-check that the directory where npm installs 
+global packages is included in your system's PATH. 
+The directory is usually something like C:\Users\YourUsername\AppData\Roaming\npm on Windows.
+ On macOS/Linux, it's typically /usr/local/bin or another location.
+
+Use npx as a Temporary Solution:
+If you encounter issues with the
+global EAS CLI, you can use npx as a temporary solution. For example:
+
+bash
+Copy code
+npx eas login
+This will use the locally installed EAS CLI without relying on the globally installed version.
+
+After completing these steps, you should be able to use the eas command without any issues.
+ If you continue to face problems, ensure that the installation path of the 
+ global npm packages is included in your system's PATH. If the issue persists, there might 
+be an issue with the npm configuration or the environment variables.

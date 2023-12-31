@@ -1,0 +1,31 @@
+
+Subhra Mukherjee <subhra.mukherjee@ivanwebsolutions.com>
+Attachments
+Wed, Sep 27, 5:29 PM
+to me
+
+Hi Subhajit,
+
+ 
+
+Kindly check the machine test task below & find the attachments :
+
+ 
+
+Machine test task -
+
+1. Design - Please find attached screens (3 screens)
+2. Functionality -
+
+    * Create 1 tab+drawer  application
+    * Create a Header as a component
+    * Add redux in the project, and data fetch from redux
+
+    
+
+
+*** The design should be accurate ***
+
+Please provide the source code and APK file after completing all the task. APK size should be reduced. 
+
+NOTE - Kindly use React Native's latest version. 

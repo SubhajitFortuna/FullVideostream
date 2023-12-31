@@ -1,0 +1,54 @@
+npx expo build:android
+
+  $ expo build:android is not supported in the local CLI, please use eas build -p android instead
+ChatGPT
+It seems like there have been changes in the Expo CLI, and 
+they are now encouraging users to use the Expo Application Services 
+(EAS) Build for building Android and iOS apps. The error message is 
+suggesting that you use eas build instead of expo build:android.
+
+Here's how you can proceed:
+
+Install EAS CLI:
+If you haven't already, you need to install the EAS CLI. Run the following 
+command to install it globally:
+
+bash
+Copy code
+npm install -g eas-cli
+Authenticate with EAS:
+Authenticate with EAS by running the following command and following the prompts:
+
+bash
+Copy code
+eas login
+This will prompt you to log in to your Expo account.
+
+Initiate EAS Build:
+Instead of using expo build:android, use the following command with EAS:
+
+bash
+Copy code
+eas build --platform android
+This command initiates the EAS build for Android.
+
+Follow On-Screen Instructions:
+EAS will guide you through the build process.
+ Follow the on-screen instructions,
+  and it may ask for additional information or configurations depending on your project.
+
+Check Build Status:
+You can check the status of your build using:
+
+bash
+Copy code
+eas build --status
+This will provide information about the status of your build,
+ and once it's complete,
+it will provide a link to download the built artifacts.
+
+Using EAS Build is recommended by
+ Expo for improved performance and more control 
+ over the build process. If you encounter any issues or need more information, 
+ you can refer to the official EAS documentation:
+  Expo Application Services (EAS) - Build.

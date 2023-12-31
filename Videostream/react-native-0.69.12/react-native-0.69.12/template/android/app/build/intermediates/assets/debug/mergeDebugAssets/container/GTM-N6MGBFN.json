@@ -1,0 +1,56 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2021-10-06 07:14:59",
+    "containerVersion": {
+        "path": "accounts/6000004470/containers/51773807/versions/0",
+        "accountId": "6000004470",
+        "containerId": "51773807",
+        "containerVersionId": "0",
+        "container": {
+            "path": "accounts/6000004470/containers/51773807",
+            "accountId": "6000004470",
+            "containerId": "51773807",
+            "name": "TBS UAE APP - Android",
+            "publicId": "GTM-N6MGBFN",
+            "usageContext": [
+                "ANDROID_SDK_5"
+            ],
+            "fingerprint": "1632153935886",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6000004470/containers/51773807/workspaces?apiLink=container"
+        },
+        "builtInVariable": [
+            {
+                "accountId": "6000004470",
+                "containerId": "51773807",
+                "type": "APP_ID",
+                "name": "App ID"
+            },
+            {
+                "accountId": "6000004470",
+                "containerId": "51773807",
+                "type": "APP_NAME",
+                "name": "App Name"
+            },
+            {
+                "accountId": "6000004470",
+                "containerId": "51773807",
+                "type": "APP_VERSION_CODE",
+                "name": "App Version Code"
+            },
+            {
+                "accountId": "6000004470",
+                "containerId": "51773807",
+                "type": "APP_VERSION_NAME",
+                "name": "App Version Name"
+            },
+            {
+                "accountId": "6000004470",
+                "containerId": "51773807",
+                "type": "EVENT_NAME",
+                "name": "Event Name"
+            }
+        ],
+        "fingerprint": "1633504499716",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6000004470/containers/51773807/versions/0?apiLink=version"
+    }
+}

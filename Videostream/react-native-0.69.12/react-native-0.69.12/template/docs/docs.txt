@@ -1,0 +1,188 @@
+This is my folder structure 
+with file system
+expo
+|
+|-- App.tsx
+|-- App
+|    |
+|    |-- tabs
+|         |
+|         |-- Layout.tsx
+|         |-- index.tsx
+|         |-- two.tsx
+|
+|-- Layout.tsx
+|-- ...missing.tsx
+|-- html.tsx
+|-- Modal.tsx
+|
+|-- Assets
+|    |
+|    |-- Components
+|         |
+|         |-- Editscreeninfo.tsx
+|         |-- Externallink.tsx
+|         |-- StyledText.tsx
+|         |-- Themed.tsx
+|
+|-- constants
+     |
+     |-- Colors.tsx
+===============================================================================================
+
+It looks like you have a folder and file structure for a 
+React Native project using Expo. Here's a brief 
+overview of what each folder and file might contain:
+
+App:
+
+tabs: Possibly where your tab components or configurations are located.
+Layout.tsx: A component or file related to the layout of your app.
+index.tsx: The main entry point for your Expo app.
+two.tsx: Another component or file related to your app.
+Layout.tsx:
+
+...missing.tsx: A file that seems to be missing. You might need to add 
+this file if it's a crucial part of your app.
+html.tsx: A component or file related to handling HTML content.
+Modal.tsx: A component or file related to modals in your app.
+Assets:
+
+Components:
+Editscreeninfo.tsx: Component related to editing screen information.
+Externallink.tsx: Component handling external links.
+StyledText.tsx: Component for styled text.
+Themed.tsx: A themed component.
+constants:
+
+Colors.tsx: A file containing color constants for your app.
+This structure seems to follow a common pattern in React Native development,
+ with components organized into folders, and constants stored separately. 
+ It's a good practice to keep related files 
+ together for better organization and maintainability.
+
+If you have specific questions about any part of your project or 
+if there's something specific you're trying to achieve, 
+feel free to ask for more detailed assistance!
+
+
+====================================================================================
+
+
+
+
+It looks like you have a folder structure for 
+an Expo project with TypeScript. Here's a brief overview 
+of your folder structure based on your description:
+
+css
+Copy code
+expo
+├── App
+│   ├── tabs
+│   │   ├── Layout.tsx
+│   │   ├── index.tsx
+│   │   └── two.tsx
+│   ├── Layout.tsx
+│   ├── ...missing.tsx
+│   ├── html.tsx
+│   └── Modal.tsx
+└── Assets
+    ├── Components
+    │   ├── Editscreeninfo.tsx
+    │   ├── Externallink.tsx
+    │   ├── StyledText.tsx
+    │   └── Themed.tsx
+    └── constants
+        └── Colors.tsx
+Here's a breakdown of the structure:
+
+expo: This is your project root.
+
+App: This folder seems to contain the main application code.
+
+tabs: Subfolder for components related to tabs.
+
+Layout.tsx: A component related to the layout.
+index.tsx: An index file, possibly for exporting components from the tabs folder.
+two.tsx: Another component related to the tabs.
+Layout.tsx: A component related to the layout outside the tabs folder.
+
+...missing.tsx: It looks like a placeholder or a component related to something missing.
+
+html.tsx: A component related to HTML.
+
+Modal.tsx: A component related to modals.
+
+Assets: This folder contains assets used in your project.
+
+Components: Subfolder for reusable components.
+Editscreeninfo.tsx: A component related to editing screen information.
+Externallink.tsx: A component related to external links.
+StyledText.tsx: A styled text component.
+Themed.tsx: A themed component.
+constants: Subfolder for constant values.
+Colors.tsx: A file containing color constants.
+This structure seems well-organized, with components 
+grouped by functionality and assets separated into different folders. 
+TypeScript is used for better type safety. 
+If you have specific questions or if there's anything 
+you'd like assistance with regarding your project, feel free to ask!
+
+
+
+{
+  "name": "videstream",
+  "main": "expo-router/entry",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "test": "jest --watchAll"
+  },
+  "jest": {
+    "preset": "jest-expo"
+  },
+  "dependencies": {
+    "@expo/vector-icons": "^13.0.0",
+    "@react-navigation/native": "^6.0.2",
+    "expo": "~49.0.15",
+    "expo-font": "~11.4.0",
+    "expo-linking": "~5.0.2",
+    "expo-router": "^2.0.0",
+    "expo-splash-screen": "~0.20.5",
+    "expo-status-bar": "~1.6.0",
+    "expo-system-ui": "~2.4.0",
+    "expo-web-browser": "~12.3.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-native": "0.72.6",
+    "react-native-gesture-handler": "~2.12.0",
+    "react-native-safe-area-context": "4.6.3",
+    "react-native-screens": "~3.22.0",
+    "react-native-web": "~0.19.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "@types/react": "~18.2.14",
+    "@types/react-native": "^0.72.6",
+    "jest": "^29.2.1",
+    "jest-expo": "~49.0.0",
+    "react-test-renderer": "18.2.0",
+    "typescript": "^5.1.3"
+  },
+  "overrides": {
+    "react-refresh": "~0.14.0"
+  },
+  "resolutions": {
+    "react-refresh": "~0.14.0"
+  },
+  "private": true
+}
+
+
+Home icons
+watchlist icon
+ 

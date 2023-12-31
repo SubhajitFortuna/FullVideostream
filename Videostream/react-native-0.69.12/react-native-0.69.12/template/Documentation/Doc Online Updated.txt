@@ -1,0 +1,10 @@
+Full Doc file is here 
+
+This Doc is updated on each new update of Playtube Android release
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+npx eas build --platform android --profile development --timeout 600000
+
+
+https://doughouzlight.com/?onepage-docs=playtube-andorid

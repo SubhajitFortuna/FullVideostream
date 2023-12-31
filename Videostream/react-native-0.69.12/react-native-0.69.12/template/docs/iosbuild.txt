@@ -1,0 +1,89 @@
+how to create debug apk in expo app and test in real device in iphone for ios
+ChatGPT
+Expo is a popular framework for building React Native applications,
+ and it simplifies the process of developing and testing mobile apps.
+  If you want to create a debug APK for testing on a real iPhone device,
+   you'll need to follow a few steps. 
+   Keep in mind that Expo primarily focuses on Over-the-Air (OTA) 
+   updates, so the traditional 
+   concept of generating debug APKs is somewhat different.
+
+Here's a step-by-step guide to help you achieve this:
+
+1. Install Expo CLI
+Make sure you have Expo CLI installed globally.
+ You can install it using npm:
+
+bash
+Copy code
+npm install -g expo-cli
+2. Create Your Expo Project
+If you haven't already created an Expo project, 
+use the following command to create a new one:
+
+bash
+Copy code
+expo init YourProjectName
+Follow the prompts to set up your project.
+
+3. Navigate to Your Project Directory
+bash
+Copy code
+cd YourProjectName
+4. Configure App.json for Production Build
+In your app.json file, make sure the 
+expo object includes the necessary 
+configurations for building a production version. 
+You may need to adjust name, slug, and other fields:
+
+json
+Copy code
+{
+  "expo": {
+    "name": "YourAppName",
+    "slug": "your-app-slug",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./path/to/your/icon.png",
+    // Add other configurations as needed
+  }
+}
+5. Build the Expo Project
+Run the following command to build the Expo project:
+
+bash
+Copy code
+expo build:ios
+Follow the prompts to log in to your 
+Expo account and select the appropriate options for your build.
+
+6. Wait for the Build to Complete
+This process may take some time. Once the build is complete, 
+Expo will provide you with a link to download the build.
+
+7. Install the Expo Client on Your iPhone
+Install the Expo Client on your iPhone from the App Store.
+
+8. Scan QR Code
+Open the Expo Client on your iPhone and 
+use it to scan the QR code displayed 
+in the terminal or available at the provided build link.
+
+9. Test on Real Device
+Your Expo app should now 
+be running on your real iPhone device. 
+You can test and debug it just 
+like you would with the Expo development server.
+
+Keep in mind that Expo uses a 
+development server to serve your JavaScript code,
+ so your iPhone device needs to be on the same network as your development machine.
+
+Remember that this method is suitable for testing, 
+but for production releases, 
+you might want to consider submitting your app to the App Store.
+ Expo provides documentation on how to handle this process.
+
+
+
+

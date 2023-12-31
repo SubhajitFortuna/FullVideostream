@@ -1,0 +1,161 @@
+import React, { useEffect } from "react";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { Image, Text, StyleSheet, TouchableOpacity, View } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import Home from "./screens/Home";
+import Watchlist from "./screens/Wathlist";
+import Settings from "./screens/Settings";
+import Account from "./screens/Account";
+import Splash from "./screens/Spalsh";
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { createStackNavigator } from "@react-navigation/stack";
+
+const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
+
+const MiddleTabButton = ({ onPress }) => {
+  return (
+    <TouchableOpacity onPress={onPress} style={styles.middleTabButton}>
+      <Image
+        source={require("./assets/images/PlayStream.png")}
+        style={styles.middleTabIcon}
+      />
+    </TouchableOpacity>
+  );
+};
+
+const BottomTabNavigator = () => {
+  return (
+    <NavigationContainer>
+      <Tab.Navigator
+        screenOptions={({ route }) => ({
+          headerShown: false,
+          tabBarIcon: ({ focused, color, size }) => {
+            let iconName;
+            let Icons;
+
+            if (route.name === "Home") {
+              iconName = focused ? "home-outline" : "home-outline";
+            } else if (route.name === "Watchlist") {
+              iconName = focused
+                ? "view-dashboard-outline"
+                : "view-dashboard-outline";
+            } else if (route.name === "Account") {
+              iconName = focused ? "account-circle" : "account-circle";
+            } else if (route.name === "Settings") {
+              iconName = focused ? "settings" : "settings-outline";
+            }
+
+            return (
+              <MaterialCommunityIcons
+                name={iconName}
+                size={size}
+                color={color}
+              />
+            );
+          },
+          tabBarLabel: ({ focused, color }) => {
+            let labelText = route.name;
+            return (
+              <Text style={{ color, fontSize: 12, marginBottom: 11 }}>
+                {labelText}
+              </Text>
+            );
+          },
+        })}
+        tabBarOptions={{
+          showLabel: true,
+          activeTintColor: "#e70d8d",
+          inactiveTintColor: "#ccc",
+          style: {
+            backgroundColor: "#3a3a42",
+            height: 60,
+          },
+          tabStyle: { height: 44 },
+          centered: true,
+        }}
+      >
+        <Tab.Screen
+          name="Home"
+          component={Home}
+          options={{
+            tabBarButton: (props) => (
+              <TouchableOpacity {...props} style={styles.tabBarButton} />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Watchlist"
+          component={Watchlist}
+          options={{
+            tabBarButton: (props) => (
+              <TouchableOpacity {...props} style={styles.tabBarButton} />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="MiddleTab"
+          component={() => null}
+          options={{
+            tabBarButton: (props) => <MiddleTabButton {...props} />,
+          }}
+        />
+        <Tab.Screen
+          name="Account"
+          component={Account}
+          options={{
+            tabBarButton: (props) => (
+              <TouchableOpacity {...props} style={styles.tabBarButton} />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Settings"
+          component={Settings}
+          options={{
+            tabBarButton: (props) => (
+              <TouchableOpacity {...props} style={styles.tabBarButton} />
+            ),
+          }}
+        />
+      </Tab.Navigator>
+    </NavigationContainer>
+  );
+};
+
+const App = ({ navigation }) => {
+  useEffect(() => {
+    // Simulate a delay for the splash screen
+    setTimeout(() => {
+      // Navigate to the Main screen (bottom tab navigator) after the splash screen
+      navigation.replace("Settings");
+    }, 3600000); // 1 hour (3600000 milliseconds)
+  }, []);
+
+  return (
+    <NavigationContainer>
+      <Stack.Navigator headerMode="none">
+        <Stack.Screen name="Splash" component={Splash} />
+        <Stack.Screen name="Settings" component={Settings} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
+
+const styles = StyleSheet.create({
+  middleTabButton: {
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  middleTabIcon: {
+    width: 50,
+    height: 50,
+  },
+  tabBarButton: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+});
+
+export default BottomTabNavigator;

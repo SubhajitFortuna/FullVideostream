@@ -1,0 +1,150 @@
+npm start
+
+> HealthCare@0.0.1 start
+> react-native start
+
+
+                        #######
+                   ################
+                #########     #########
+            #########             ##########
+        #########        ######        #########
+       ##########################################
+      #####      #####################       #####
+      #####          ##############          #####
+      #####    ###       ######       ###    #####
+      #####    #######            #######    #####
+      #####    ###########    ###########    #####
+      #####    ##########################    #####
+      #####    ##########################    #####
+      #####      ######################     ######
+       ######        #############        #######
+         #########        ####       #########
+              #########          #########
+                  ######### #########
+                       #########
+
+
+error listen EADDRINUSE: address already in use :::8081.
+Error: listen EADDRINUSE: address already in use :::8081
+    at Server.setupListenHandle [as _listen2] (node:net:1463:16)
+    at listenInCluster (node:net:1511:12)
+    at Server.listen (node:net:1599:7)
+    at D:\react-native-0.69.12\react-native-0.69.12\template\node_modules\metro\src\index.js:208:16   
+    at new Promise (<anonymous>)
+    at Object.exports.runServer (D:\react-native-0.69.12\react-native-0.69.12\template\node_modules\metro\src\index.js:207:10)
+    at async Object.runServer [as func] (D:\react-native-0.69.12\react-native-0.69.12\template\node_modules\@react-native-community\cli-plugin-metro\build\commands\start\runServer.js:123:26)
+    at async Command.handleAction (D:\react-native-0.69.12\react-native-0.69.12\template\node_modules\@react-native-community\cli\build\index.js:192:9)
+info Run CLI with --verbose flag for more details.
+ChatGPT
+The error message is indicating that the port 8081 is already in use. 
+This commonly happens when another process is already running on that port, 
+which could be another instance of the Metro Bundler or another server.
+
+Here are a few steps to resolve this issue:
+
+Find and Kill the Process:
+
+Open a terminal window.
+Run the following command to find the process using port 8081:
+bash
+Copy code
+lsof -i :8081
+Identify the process ID (PID) and use the following command to kill it:
+bash
+Copy code
+kill -9 <PID>
+Replace <PID> with the actual process ID you found.
+Change Metro Bundler Port:
+
+If you frequently encounter port conflicts, you can change the default 
+port used by the Metro Bundler. To do this, create a .env file in the root of your 
+React Native project (if you don't have one already) and add the following line:
+bash
+Copy code
+METRO_PORT=8082
+This will set the Metro Bundler to use port 8082. You can choose any available port.
+Restart the Development Server:
+
+After resolving the port conflict, restart the development server by running:
+bash
+Copy code
+npm start
+Check for Background Processes:
+
+Ensure that there are no background processes or terminals running Metro Bundler. 
+Sometimes, a process might still be running in the background.
+Use --reset-cache:
+
+If the issue persists, try starting the Metro Bundler with the --reset-cache option:
+bash
+Copy code
+npm start -- --reset-cache
+These steps should help you resolve the "EADDRINUSE" error related to port 8081. 
+If the issue persists, you may need to investigate further to 
+identify any other processes or configurations causing the conflict.
+
+User
+lsof -i :8081
+'lsof' is not recognized as an internal or external command,
+operable program or batch file.
+
+ChatGPT
+It appears that the lsof command is not recognized on your system, 
+which suggests that you are using a Windows environment. On Windows, 
+you can use the netstat command to find the process using a specific port. 
+Here's how you can find and kill the process using port 8081 on Windows:
+
+Open Command Prompt with administrative privileges. Right-click on the Command Prompt icon and select "Run as administrator."
+
+Use the following command to find the process ID (PID) using port 8081:
+
+bash
+Copy code
+netstat -ano | find "8081"
+This will display a list of processes using port 8081 along with their corresponding PIDs.
+
+Identify the PID of the process you want to terminate.
+
+Use the following command to kill the process:
+
+bash
+Copy code
+taskkill /F /PID <PID>
+Replace <PID> with the actual process ID you want to terminate.
+
+After completing these steps, try running your React Native 
+app again using npm start. If the issue persists, consider 
+changing the Metro Bundler port as suggested in the previous response or checking for other 
+background processes that might be using the same port
+
+
+==================================================================
+
+netstat -ano | find "8081"
+  TCP    0.0.0.0:8081           0.0.0.0:0              LISTENING       21656
+  TCP    127.0.0.1:2742         127.0.0.1:8081         ESTABLISHED     27236
+  TCP    127.0.0.1:2744         127.0.0.1:8081         ESTABLISHED     27236
+  TCP    127.0.0.1:8081         127.0.0.1:2742         ESTABLISHED     21656
+  TCP    127.0.0.1:8081         127.0.0.1:2744         ESTABLISHED     21656
+  TCP    [::]:8081              [::]:0                 LISTENING       21656
+
+now how to kill this now
+
+ChatGPT
+Great, you've identified the PID (Process ID) associated with the port 8081. 
+In your case, the PID is 21656. Now, you can use the taskkill 
+command to terminate the process. Open Command Prompt with administrative 
+privileges and run the following command:
+
+bash
+Copy code
+taskkill /F /PID 21656
+This command forcefully terminates the process with the specified PID. 
+After running this command, try running your React Native app again using npm start. 
+The port should now be available for the Metro Bundler to use without conflicts.
+
+If you encounter any issues or if the problem persists, you may want to 
+ensure that there are no other background processes using port 8081. 
+Additionally, you can consider changing the Metro Bundler port in 
+your project configuration to avoid conflicts in the future.

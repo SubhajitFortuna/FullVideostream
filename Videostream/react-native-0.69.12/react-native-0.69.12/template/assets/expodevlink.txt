@@ -1,0 +1,7 @@
+c:\CODMW2019\WhatsApp Image 2023-11-11 at 18.57.09.jpeg
+
+https://expo.dev/accounts/subhajitnewmac/projects/Videostream/
+builds/b2812293-76e3-488d-bb2a-b5d8c4da53c8   
+
+npx eas build --platform android --profile development --timeout 600000
+

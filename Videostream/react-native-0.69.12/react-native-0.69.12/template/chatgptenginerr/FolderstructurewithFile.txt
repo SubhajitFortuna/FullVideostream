@@ -1,0 +1,126 @@
+//=====================My project folder structure with file system===============================//
+(React native)                                                        (Flutter)
+template
+|---------->android                       
+|                                                 1) ()========> First guide me folder structure and file
+|------->assets                                       which be equal for react native for same app 
+|                                                         in flutter
+|                                                             then move to second point
+|                                                   2)   ()========>   Full same react native app I want to convert into     
+|                                                        Flutter app in android platform in using dart language
+|----->app                                               using third party libraries that was used in react native
+|------>ios                                              same right third party libraries 
+|                                                         which is support  for flutter 
+|------>android
+|
+|------>components
+|        |
+|        |--->Textinput      
+|              |-->CustomConfirmPasswordTextInput.js    
+|              |-->CustomEmailTextInput.js 
+|              |-->CustomPasswordTextInput.js
+|              |-->CustomTextInput.js
+|
+|   |-->AccountHeader.js
+|   |-->Homeheader.js 
+|   |-->LatestShowsHeader.js
+|   |-->MyWatchlistheader.js
+|   |-->Settingsheader.js
+|   |-->LatestShowsHeader.js
+|   |-->MyWatchlistheader.js
+|   |-->Settingsheader.js
+|   |-->LatestShowsHeader.js
+|   |-->MyWatchlistheader.js
+|   |-->Sportsheader.js
+|   
+|
+|---------->constants
+|    |--->Color.ts
+|
+|------------>navigator
+|     |--->BottomtabNavigation.js
+|     |--->DrawerNavigation.js
+|     |--->Appnavigator.js 
+|
+|
+|------------->screens
+|     |--->Account.js
+|     |--->Home.js
+|     |--->Settings.js 
+|     |--->Splash.js
+|     |---->Wathlist.js
+|     |---->TVShows.js
+|     |---->Sports.js
+|     |---->LatestShows.js
+|     |---->Login.js
+|     |---->Register.js
+|     |---->Aboutus.js 
+|
+|
+|
+|
+|
+|----------->package-lock.json
+|------->package.json
+|-------->babel.config.js
+|------>App.js
+|
+
+
+
+===========================================================================
+package.json  code below
+
+
+{
+  "name": "HelloWorld",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@react-native-google-signin/google-signin": "^7.2.0",
+    "@react-navigation/bottom-tabs": "^5.11.11",
+    "@react-navigation/compat": "^5.2.8",
+    "@react-navigation/drawer": "^5.12.5",
+    "@react-navigation/native": "^5.9.4",
+    "@react-navigation/stack": "^5.14.5",
+    "axios": "^0.24.0",
+    "native-base": "^2.13.2",
+    "react": "18.0.0",
+    "react-native": "0.69.12",
+    "react-native-bootsplash": "^3.2.1",
+    "react-native-gesture-handler": "^1.10.3",
+    "react-native-image-zoom-viewer": "^2.2.8",
+    "react-native-linear-gradient": "^2.8.3",
+    "react-native-paper": "^4.7.2",
+    "react-native-reanimated": "^2.2.4",
+    "react-native-safe-area-context": "^4.2.4",
+    "react-native-screens": "^3.11.0",
+    "react-native-share": "^7.6.0",
+    "react-native-share-menu": "^4.1.1",
+    "react-native-vector-icons": "^6.6.0",
+    "react-redux": "^7.2.6",
+    "redux": "^4.1.2",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^5.3.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/runtime": "^7.12.5",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "babel-jest": "^26.6.3",
+    "eslint": "^7.32.0",
+    "jest": "^26.6.3",
+    "metro-react-native-babel-preset": "^0.70.3",
+    "react-test-renderer": "18.0.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}

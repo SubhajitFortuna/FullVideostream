@@ -1,0 +1,42 @@
+The error indicates that there is no development build of your
+ Expo project installed on the Android emulator. 
+ This typically happens when you haven't built and 
+ installed the Expo Go app on your emulator or device.
+
+Here are the steps to resolve the issue:
+
+Build and Install Development Build:
+
+Ensure that your Android emulator is running.
+
+Open a new terminal window, navigate to your project directory,
+ and run the following command to build and install the development build on the emulator:
+
+bash
+Copy code
+expo build:android -t apk
+This command will build the Android APK file for your Expo project. 
+Once the build is complete, Expo CLI will provide a link to download the APK. 
+Download and install the APK on your emulator.
+
+Restart Expo Development Server:
+
+After installing the development build on the emulator,
+ restart the Expo development server 
+ by stopping it with Ctrl+C in the terminal 
+ where it's running and then running npm start again.
+Run Expo Go App:
+
+Open Expo Go on your emulator,
+ and you should see your project listed. If not,
+  scan the QR code provided in the Expo CLI output.
+Check Expo Go Version:
+
+Ensure that you are using a compatible version of Expo Go.
+ Sometimes, using an outdated Expo Go version 
+ can cause compatibility issues. Update Expo Go on your emulator if needed.
+After completing these steps, your development 
+build should be installed on the Android emulator,
+ and you should be able to open and run your Expo project.
+  If you encounter any issues, double-check 
+  the Expo documentation for the latest instructions and troubleshooting tips.

@@ -1,0 +1,7 @@
+1)https://icons.expo.fyi/Index
+
+2)https://www.color-hex.com/color-palette/13479
+
+3)https://oblador.github.io/react-native-vector-icons/
+
+4)https://htmlcolorcodes.com/color-picker/

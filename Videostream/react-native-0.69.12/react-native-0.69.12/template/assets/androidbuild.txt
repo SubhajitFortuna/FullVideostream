@@ -1,0 +1,65 @@
+1)npx eas login 
+2)npx eas build --platform android --profile development
+npx eas build --platform android --profile development --timeout 600000
+3)npx eas build --platform ios --profile development
+
+
+
+in android emulator how to install expo go app
+
+ChatGPT
+To install the Expo Go app on an Android emulator, you can follow these steps:
+
+Start the Android Emulator:
+Make sure your Android emulator is up and running.
+ You can use Android Studio or any other emulator that you prefer.
+
+Open the Emulator:
+Launch the emulator by starting it from Android Studio or your emulator manager.
+
+Access the Google Play Store:
+In the Android emulator, 
+locate and open the Google Play Store. 
+You'll typically find it on the home screen or in the app drawer.
+
+Sign In to Google Account (Optional):
+If prompted, sign in with a Google account. 
+This step might be necessary to access the Google Play Store.
+
+Search for "Expo Go":
+In the Google Play Store, use the search bar to look for 
+"Expo Go." Type "Expo Go" and press Enter.
+
+Select Expo Go:
+Find the Expo Go app in the search results and select it.
+
+Install Expo Go:
+Click on the "Install" button to download 
+and install Expo Go on the Android emulator.
+
+Open Expo Go:
+Once the installation is complete, you can open Expo Go directly 
+from the Play Store or find it in the app drawer.
+
+Scan QR Code or Enter Project URL:
+Open Expo Go, and you will be 
+prompted to scan a QR code or enter a project URL. 
+You can do this when running npm start or expo start in your project directory.
+
+If you are using npm start in your project directory, 
+the Expo CLI will display a QR code in the terminal. 
+Scan this QR code using Expo Go on the emulator.
+
+If you are using expo start, a new tab or window will open in your default web browser, 
+and you'll find a QR code there. Scan this QR code using Expo Go on the emulator.
+
+After scanning the QR code, Expo Go should load 
+and display your app on the Android emulator. 
+You can now interact with and test your Expo app directly within the emulator.
+
+Remember that for Expo Go to work properly, your development 
+machine and the emulator should be on the same network. 
+If you encounter any issues,
+double-check your network settings and ensure 
+that the development server is running (npm start or expo start).
+

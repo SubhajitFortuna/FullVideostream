@@ -1,0 +1,139 @@
+join on above link
+1) Project Clone (powershell cmd)(inside git folder)
+2) Branch Checkout (powershell cmd)    //first go project folder(git) e.g cd .\thebodyshopapp\
+     (git checkout <branch name>)
+3) yarn install (should be without any errors)
+4) Build Bundle with command (npx react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res)
+5) change directory to android of that project
+6) Build apk with command ( ./gradlew assembleDebug ) 
+npm start -- --reset-cache
+7) Yarn link:(https://classic.yarnpkg.com/en/docs/cli/install)
+projects 
+git clone https://mindnerves1@bitbucket.org/mindnerves_technologies/thebodyshopuae.git
+git clone https://mindnerves1@bitbucket.org/mindnerves_technologies/mihyar_orob.git
+git clone https://mindnerves1@bitbucket.org/mindnerves_technologies/legoapp.git
+git clone https://mindnerves1@bitbucket.org/mindnerves_technologies/elc_order_broker.git
+
+amit kumar, 35 min
+TBS KSA -> branch name -> rosalind-live
+TBS UAE -> branch name -> live
+mihyar -> branch name -> live
+legoapp -> branch name -> live(link:https://qa.saudiblocks.com/ar/productlisting/themes/lego-duplo)
+elc -> branch name -> live
+username: mindnerves1
+new password : 8WY8F3tz2nNdaUP37Eb8
+
+amit kumar, 31 min
+bitbucket authorisation account :
+
+username: Jagbir.paul@gmail.com
+password: th3p0p3y3
+new password:p1nkp4nth3r
+p1nkp4nth3r123#
+
+amit kumar, 28 min
+
+break connection from git (remove .git folder from DEV folder. [not from git folder]) 
+
+
+---------------------------TO-UPDATE-LOCAL-REPOSITORY------------------------------------
+To create a new branch 
+git branch -b feature/plp
+To Check Status
+git status
+To Add File in Git Staging
+git add .
+To Create Commit 
+git commit -m "message"
+To Push 
+git push origin <branch-name>
+To Pull
+git pull origin <branch-name> // fetch code from git
+1) git pull
+2) git status
+3) beyond compare
+4) git add .
+5) git status
+6) git commit -m <message>
+7) git push origin <branch-name>
+
+to check branch
+git branch -a
+
+
+---------------------------------------------------------------------------------------------
+new Build
+
+first go to terminal----
+
+ *** go to android folder by using command cd android
+1. run ./gradlew clean
+
+Then return to the previous folder by cd ..
+
+*** then use
+2. react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/
+
+*** then go to android folder and use
+
+# for debug
+./gradlew assembleDebug
+
+
+6.6.0
+npm install --legacy-peer-deps
+npm install --force
+
+npm i lottie-react-native@5.0.1 --legacy-peer-deps
+
+
+
+
+
+# for  release (i.e for QA and Client)
+
+
+./gradlew assembleRelease -x bundleReleaseJsAndAssets
+
+
+
+# for aab file (play store release):
+
+./gradlew bundleRelease -x bundleReleaseJsAndAssets
+
+(aab app file path: android\app\build\outputs\bundle\release )
+-----------------------------------------------------------------------------
+
+React native Debuger option
+-----------------------------------------------------------------------------------
+1)CTRL + M to open debuger option in react native for in android emulator
+(****----*** main command)
+
+(Before that enable debug option from android emulator by press CTRL + M)
+
+2) To search inspect element ->(herelink:http://localhost:8081/debugger-ui/) then from Sources press Ctrl+p to see react native folder/file.js Or Foldername Or file.js name 
+
+Press f12 in chrome when click anything in react native page 
+(to see error in the page)
+Press f5 in network tab in google chrome tab to check api call for react native
+
+OR -> next option
+
+amit kumar, 10 min
+step to debug
+1. shake mobile, select debug
+2. enter your ip address and port number. // 192.168.29.67:8081 
+http://localhost:8081/debugger-ui/
+use your ip Address. 
+
+React native api call weblink
+https://qa.saudiblocks.com/
+
+
+git branch to check all branch  -> git branch -a
+
+git checkout family-club-live  (to choose specific branch)
+
+git branch branchname (to see specific branch)
+
+

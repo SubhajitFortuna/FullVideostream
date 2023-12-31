@@ -1,0 +1,230 @@
+https://oblador.github.io/react-native-vector-icons/
+
+https://fontawesome.com/icons
+
+https://fontawesome.com/v4/icons/
+
+chatgpt link
+https://chat.openai.com/share/53dbaf1d-80e8-4014-b658-40d3a577fa38
+
+
+
+
+
+react native which mainly good for ui in page
+
+ChatGPT
+In React Native, there are several libraries and 
+frameworks that are commonly used for building user interfaces.
+ The choice often depends on personal preference, project requirements, and specific use cases. 
+ Here are some popular libraries and frameworks for UI development in React Native:
+
+React Navigation: This is the standard library for 
+navigation in React Native applications. It provides a flexible and extensible navigation solution, 
+supporting various navigation patterns such as stack, tab, drawer, and more.
+
+React Native Paper: A material design implementation for React Native.
+ It comes with pre-built components following the Material Design guidelines,
+  making it easy to create visually appealing UIs.
+
+React Native Elements: A cross-platform UI toolkit for React Native,
+ providing a set of customizable components like buttons, icons, and more. 
+ It simplifies UI development by offering a consistent set of styled components.
+
+NativeBase: A widely used UI 
+component library for React Native that provides a set of 
+essential cross-platform components. It follows 
+a clean and modular architecture, making it easy to customize and extend.
+
+Shoutem UI Toolkit: A set of pre-designed, responsive 
+UI components for React Native applications. It offers a variety of 
+themes and styles that can be easily customized.
+
+UI Kitten: A React Native UI library that comes with a set 
+of customizable components inspired by the Eva Design System. 
+It supports theming and provides a modern look and feel.
+
+Ant Design Mobile RN: The React Native version of Ant Design, 
+a popular design system and component library. It offers a set of 
+high-quality components following the Ant Design principles.
+
+Grommet Native: A React Native implementation of the Grommet 
+design system, offering a set of accessible and responsive UI components.
+
+When choosing a UI library or framework, consider factors such as 
+community support, documentation, ease of customization, 
+and adherence to design principles. Additionally, 
+keep in mind that the React Native ecosystem is evolving, 
+and new libraries may emerge over time.
+
+
+
+1)account page design 
+
+
+import React from 'react';
+import { View, Text } from 'react-native';
+
+
+const Account = () => {
+  return (
+    
+      <View>
+        <Text>Main </Text>
+      </View>
+  );
+};
+
+export default Account;
+this is my  account page  code
+
+now change the account page ui like this using 
+react-native-material-ui
+
+============================
+|icon Account  serachicon   |==> additional header
+|========================== |
+|                           |
+|                           |  
+|                           |
+|                           |  
+|                           |                                                 
+|        sometext           |
+|       loginbutoon         |
+|                           |                                                 
+|                           |                                                 
+|                           |                                                 
+|                           |                                                 
+|                           |                                                 
+|                           |                                                 
+=============================
+
+
+2)Home page design
+
+import React from 'react';
+import { View, Text } from 'react-native';
+
+
+const Account = () => {
+  return (
+    
+      <View>
+        <Text>Main </Text>
+      </View>
+  );
+};
+
+export default Account;
+this is my  account page  code
+
+now change the account page ui like this using 
+react-native-material-ui
+
+
+
+============================
+|icon Home  serachicon      |==> additional header
+|========================== |
+| three  image  horizonatl  |
+|-------------------------- |  
+|next section               |
+|Upcoming Movies            |  
+|  9 images horizontal      |                                                 
+|-----------------------    |
+|                           |
+|                           |                                                 
+|                           |                                                 
+|                           |                                                 
+|                           |                                                 
+|                           |                                                 
+|                           |                                                 
+=============================
+
+
+3)
+Drawer diagram 
+|                |
+|    Image       |  => Placed  img above    
+|----------------|
+| icon  Home     | => when click home text icon with it will pink color
+| icon TV Shows  |      and background highlight green color
+|                |                 with below fif
+| icon Movies    |      -----------------------
+| icon Sports    |     (  
+|                |      ----------------------- 
+| icon LiveTV    |
+| icon Settings  |
+| icon Login     |
+|                |
+|                |
+|                | 
+|                |
+|                |
+
+Login page diagram
+
+4)============================
+|Sign in to continue    Skip|
+|        below 2 textbox    | 
+|                           |
+|  --------------------     |
+|  --------------------     |  
+| Rememberme  ForgotPassword|
+|                           |  
+|  By Sigin                 |                                                 
+|                           |
+|      LOgin button         |
+|          Or Contine       |                                                 
+|      Google Button        |                                                 
+|                           |                                                 
+|                Sign Up    |                                                 
+|                           |                                                 
+|                           |                                                 
+=============================
+About us
+5)============================
+|icon About  serachicon      |==> additional header
+|========================== |
+|     Video Streaming App   |
+|-------------------------- |  
+|     Version               |
+|---------------------------|  
+|     Email                 |                                                 
+|-----------------------    |
+|     Website               |
+|-------------------------- |                                                 
+|      Contact              |                                                 
+|---------------------------|                                                 
+|      About                |                                                 
+|                           |                                                 
+|                           |                                                 
+|                           |
+|                           |
+|                           |
+|                           | 
+=============================
+
+
+Setting app
+6)============================
+|icon   serachicon          |==> additional header
+|========================== |
+| Enable Push Notification  |
+|-------------------------- |  
+| About                     |
+|---------------------------|  
+| Privacy Policy            |                                                 
+|-----------------------    |
+| Rate App                  |
+|-------------------------- |                                                 
+| Share App                 |                                                 
+|---------------------------|                                                 
+| More App                  |                                                 
+|                           |                                                 
+|                           |                                                 
+|                           |
+|                           |
+|                           |
+|                           | 
+=============================

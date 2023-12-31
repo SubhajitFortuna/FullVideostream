@@ -1,0 +1,132 @@
+import React from "react";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { Image, Text, StyleSheet, TouchableOpacity, View } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import Home from "./screens/Home";
+import Watchlist from "./screens/Wathlist";
+import Settings from "./screens/Settings";
+import Account from "./screens/Account";
+import MaterialIcons from "react-native-vector-icons/MaterialIcons";
+import Octicons from "react-native-vector-icons/Octicons"
+import SimpleLineIcons from "react-native-vector-icons/SimpleLineIcons";
+import Feather from "react-native-vector-icons/Feather";
+
+const Tab = createBottomTabNavigator();
+
+const MiddleTabButton = ({ onPress }) => {
+  return (
+    <TouchableOpacity onPress={onPress} style={styles.middleTabButton}>
+      <Image
+        source={require("./assets/images/PlayStream.png")}
+        style={styles.middleTabIcon}
+      />
+    </TouchableOpacity>
+  );
+};
+
+const iconComponents = {
+  home: SimpleLineIcons,
+  Octicons:Octicons,
+  Account: MaterialIcons,
+  Settings: Feather,
+};
+
+const BottomTabNavigator = () => {
+  return (
+    <NavigationContainer>
+      <Tab.Navigator
+        screenOptions={({ route }) => ({
+          headerShown: false,
+          tabBarIcon: ({ focused, color, size }) => {
+            const IconComponent =
+              iconComponents[route.name] || SimpleLineIcons;
+
+            return (
+              <IconComponent name={route.name} size={size} color={color} />
+            );
+          },
+          tabBarLabel: ({ focused, color }) => {
+            let labelText = route.name;
+            return <Text style={{ color, fontSize: 12, marginBottom:11}}>{labelText}</Text>;
+          },
+        })}
+        tabBarOptions={{
+          showLabel: true,
+          activeTintColor: "#e70d8d",
+          inactiveTintColor: "#ccc",
+          style: {
+            backgroundColor: "#3a3a42",
+            height:60,
+          },
+          tabStyle: { height: 44 },
+          centered: true,
+        }}
+      >
+        <Tab.Screen
+          name="Home"
+          component={Home}
+          options={{
+            tabBarButton: (props) => (
+              <TouchableOpacity {...props} style={styles.tabBarButton} />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Watchlist"
+          component={Watchlist}
+          options={{
+            tabBarButton: (props) => (
+              <TouchableOpacity {...props}
+                style={styles.tabBarButton} />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="MiddleTab"
+          component={() => null}
+          options={{
+            tabBarButton: (props) => <MiddleTabButton {...props} />,
+          }}
+        />
+        <Tab.Screen
+          name="Account"
+          component={Account}
+          options={{
+            tabBarButton: (props) => (
+              <TouchableOpacity {...props}
+                style={styles.tabBarButton} />
+            ),
+          }}
+        />
+          <Tab.Screen
+          name="Settings"
+          component={Settings}
+          options={{
+            tabBarButton: (props) => (
+              <TouchableOpacity {...props}
+                style={styles.tabBarButton} />
+            ),
+          }}
+        />
+      </Tab.Navigator>
+    </NavigationContainer>
+  );
+};
+
+const styles = StyleSheet.create({
+  middleTabButton: {
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  middleTabIcon: {
+    width: 50,
+    height: 50,
+  },
+  tabBarButton: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+});
+
+export default BottomTabNavigator;
